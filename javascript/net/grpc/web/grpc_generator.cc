@@ -1598,10 +1598,10 @@ class GrpcCodeGenerator : public CodeGenerator {
   GrpcCodeGenerator() {}
   ~GrpcCodeGenerator() override {}
 
-  uint64_t GetSupportedFeatures() const override {
-    // Code generators must explicitly support proto3 optional.
-    return CodeGenerator::FEATURE_PROTO3_OPTIONAL;
-  }
+  // uint64_t GetSupportedFeatures() const override {
+  //   // Code generators must explicitly support proto3 optional.
+  //   return CodeGenerator::FEATURE_PROTO3_OPTIONAL;
+  // }
 
   bool Generate(const FileDescriptor* file, const string& parameter,
                 GeneratorContext* context, string* error) const override {
